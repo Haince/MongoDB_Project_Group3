@@ -1,6 +1,6 @@
 ﻿namespace RedditSearch
 {
-    partial class SearchResults
+    partial class FinalDisplay
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridViewAuthorResult = new System.Windows.Forms.DataGridView();
-            this.buttonReturnToSearch = new System.Windows.Forms.Button();
+            this.textBoxComment = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonCommentSubmit = new System.Windows.Forms.Button();
+            this.buttonCommentClear = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuthorResult)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -44,7 +45,7 @@
             this.closeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(584, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(617, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,40 +60,59 @@
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
-            // dataGridViewAuthorResult
+            // textBoxComment
             // 
-            this.dataGridViewAuthorResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAuthorResult.Location = new System.Drawing.Point(12, 27);
-            this.dataGridViewAuthorResult.Name = "dataGridViewAuthorResult";
-            this.dataGridViewAuthorResult.Size = new System.Drawing.Size(560, 266);
-            this.dataGridViewAuthorResult.TabIndex = 1;
+            this.textBoxComment.Location = new System.Drawing.Point(378, 243);
+            this.textBoxComment.Multiline = true;
+            this.textBoxComment.Name = "textBoxComment";
+            this.textBoxComment.Size = new System.Drawing.Size(213, 80);
+            this.textBoxComment.TabIndex = 1;
             // 
-            // buttonReturnToSearch
+            // label1
             // 
-            this.buttonReturnToSearch.Location = new System.Drawing.Point(21, 326);
-            this.buttonReturnToSearch.Name = "buttonReturnToSearch";
-            this.buttonReturnToSearch.Size = new System.Drawing.Size(133, 23);
-            this.buttonReturnToSearch.TabIndex = 2;
-            this.buttonReturnToSearch.Text = "Return To Search ";
-            this.buttonReturnToSearch.UseVisualStyleBackColor = true;
-            this.buttonReturnToSearch.Click += new System.EventHandler(this.buttonReturnToSearch_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(375, 227);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Leave A Comment";
             // 
-            // SearchResults
+            // buttonCommentSubmit
+            // 
+            this.buttonCommentSubmit.Location = new System.Drawing.Point(516, 329);
+            this.buttonCommentSubmit.Name = "buttonCommentSubmit";
+            this.buttonCommentSubmit.Size = new System.Drawing.Size(75, 23);
+            this.buttonCommentSubmit.TabIndex = 3;
+            this.buttonCommentSubmit.Text = "Submit";
+            this.buttonCommentSubmit.UseVisualStyleBackColor = true;
+            // 
+            // buttonCommentClear
+            // 
+            this.buttonCommentClear.Location = new System.Drawing.Point(378, 329);
+            this.buttonCommentClear.Name = "buttonCommentClear";
+            this.buttonCommentClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonCommentClear.TabIndex = 4;
+            this.buttonCommentClear.Text = "Clear";
+            this.buttonCommentClear.UseVisualStyleBackColor = true;
+            this.buttonCommentClear.Click += new System.EventHandler(this.buttonCommentClear_Click);
+            // 
+            // FinalDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.buttonReturnToSearch);
-            this.Controls.Add(this.dataGridViewAuthorResult);
+            this.ClientSize = new System.Drawing.Size(617, 389);
+            this.Controls.Add(this.buttonCommentClear);
+            this.Controls.Add(this.buttonCommentSubmit);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxComment);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "SearchResults";
-            this.Text = "SearchResults";
-            this.Load += new System.EventHandler(this.SearchResults_Load);
+            this.Name = "FinalDisplay";
+            this.Text = "FinalDisplay";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuthorResult)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,7 +123,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridViewAuthorResult;
-        private System.Windows.Forms.Button buttonReturnToSearch;
+        private System.Windows.Forms.TextBox textBoxComment;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonCommentSubmit;
+        private System.Windows.Forms.Button buttonCommentClear;
     }
 }

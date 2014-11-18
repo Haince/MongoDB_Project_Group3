@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RedditSearch
 {
-    public partial class RedditSearchForm : Form
+    public partial class FinalDisplay : Form
     {
-        public RedditSearchForm()
+        public FinalDisplay()
         {
             InitializeComponent();
         }
@@ -22,12 +22,9 @@ namespace RedditSearch
             this.Close();
         }
 
-        private void buttonSearch_Click(object sender, EventArgs e)
+        private void buttonCommentClear_Click(object sender, EventArgs e)
         {
-            SearchResults formSR = new SearchResults();
-            this.Hide();
-            formSR.Show();
-            
+            textBoxComment.Text = "";
         }
     }
 }

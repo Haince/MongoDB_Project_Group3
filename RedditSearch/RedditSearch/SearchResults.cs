@@ -22,5 +22,12 @@ namespace RedditSearch
             //will add the connection to the database here 
             //as well as the information from the search to make the results display
         }
+
+        private void buttonReturnToSearch_Click(object sender, EventArgs e)
+        {
+            Form firstForm = new Form();
+            firstForm.Show();
+            this.Close();
+        }
     }
 }
