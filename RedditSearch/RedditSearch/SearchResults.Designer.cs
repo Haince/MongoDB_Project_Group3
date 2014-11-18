@@ -33,6 +33,7 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewAuthorResult = new System.Windows.Forms.DataGridView();
             this.buttonReturnToSearch = new System.Windows.Forms.Button();
+            this.buttonToFinal = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuthorResult)).BeginInit();
             this.SuspendLayout();
@@ -78,11 +79,22 @@
             this.buttonReturnToSearch.UseVisualStyleBackColor = true;
             this.buttonReturnToSearch.Click += new System.EventHandler(this.buttonReturnToSearch_Click);
             // 
+            // buttonToFinal
+            // 
+            this.buttonToFinal.Location = new System.Drawing.Point(358, 326);
+            this.buttonToFinal.Name = "buttonToFinal";
+            this.buttonToFinal.Size = new System.Drawing.Size(75, 23);
+            this.buttonToFinal.TabIndex = 3;
+            this.buttonToFinal.Text = "To Final";
+            this.buttonToFinal.UseVisualStyleBackColor = true;
+            this.buttonToFinal.Click += new System.EventHandler(this.buttonToFinal_Click);
+            // 
             // SearchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.buttonToFinal);
             this.Controls.Add(this.buttonReturnToSearch);
             this.Controls.Add(this.dataGridViewAuthorResult);
             this.Controls.Add(this.menuStrip1);
@@ -105,5 +117,6 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridViewAuthorResult;
         private System.Windows.Forms.Button buttonReturnToSearch;
+        private System.Windows.Forms.Button buttonToFinal;
     }
 }

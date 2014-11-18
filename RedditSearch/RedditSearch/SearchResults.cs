@@ -25,9 +25,17 @@ namespace RedditSearch
 
         private void buttonReturnToSearch_Click(object sender, EventArgs e)
         {
-            Form firstForm = new Form();
-            firstForm.Show();
+            //RedditSearchForm firstForm = new RedditSearchForm();
+            //firstForm.Show();
             this.Close();
+        }
+
+        private void buttonToFinal_Click(object sender, EventArgs e)
+        {
+            // we will just use this for now while we do not have the data 
+            //that will be used to move to the next form.
+            FinalDisplay fd = new FinalDisplay();
+            fd.ShowDialog();
         }
     }
 }
