@@ -37,7 +37,7 @@
             this.buttonCommentClear = new System.Windows.Forms.Button();
             this.labelAuthor = new System.Windows.Forms.Label();
             this.textte = new System.Diagnostics.EventLog();
-            this.textBoxAuthor = new System.Windows.Forms.TextBox();
+            this.labelAuthorDisplay = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textte)).BeginInit();
             this.SuspendLayout();
@@ -108,29 +108,29 @@
             this.labelAuthor.AutoSize = true;
             this.labelAuthor.Location = new System.Drawing.Point(12, 65);
             this.labelAuthor.Name = "labelAuthor";
-            this.labelAuthor.Size = new System.Drawing.Size(38, 13);
+            this.labelAuthor.Size = new System.Drawing.Size(44, 13);
             this.labelAuthor.TabIndex = 5;
-            this.labelAuthor.Text = "Author";
+            this.labelAuthor.Text = "Author: ";
             // 
             // textte
             // 
             this.textte.SynchronizingObject = this;
             // 
-            // textBoxAuthor
+            // labelAuthorDisplay
             // 
-            this.textBoxAuthor.Enabled = false;
-            this.textBoxAuthor.Location = new System.Drawing.Point(56, 58);
-            this.textBoxAuthor.Name = "textBoxAuthor";
-            this.textBoxAuthor.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAuthor.TabIndex = 6;
-            this.textBoxAuthor.Text = "S";
+            this.labelAuthorDisplay.AutoSize = true;
+            this.labelAuthorDisplay.Location = new System.Drawing.Point(62, 65);
+            this.labelAuthorDisplay.Name = "labelAuthorDisplay";
+            this.labelAuthorDisplay.Size = new System.Drawing.Size(35, 13);
+            this.labelAuthorDisplay.TabIndex = 6;
+            this.labelAuthorDisplay.Text = "label2";
             // 
             // FinalDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 389);
-            this.Controls.Add(this.textBoxAuthor);
+            this.Controls.Add(this.labelAuthorDisplay);
             this.Controls.Add(this.labelAuthor);
             this.Controls.Add(this.buttonCommentClear);
             this.Controls.Add(this.buttonCommentSubmit);
@@ -159,6 +159,6 @@
         private System.Windows.Forms.Button buttonCommentClear;
         private System.Windows.Forms.Label labelAuthor;
         private System.Diagnostics.EventLog textte;
-        private System.Windows.Forms.TextBox textBoxAuthor;
+        private System.Windows.Forms.Label labelAuthorDisplay;
     }
 }
