@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,7 +38,17 @@
             this.buttonCommentClear = new System.Windows.Forms.Button();
             this.labelAuthor = new System.Windows.Forms.Label();
             this.textte = new System.Diagnostics.EventLog();
-            this.textBoxAuthor = new System.Windows.Forms.TextBox();
+            this.labelAuthorDisplay = new System.Windows.Forms.Label();
+            this.labelScore = new System.Windows.Forms.Label();
+            this.labelScoreDisplay = new System.Windows.Forms.Label();
+            this.labelUp = new System.Windows.Forms.Label();
+            this.labelUpDisplay = new System.Windows.Forms.Label();
+            this.labelDown = new System.Windows.Forms.Label();
+            this.labelDownDisplay = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.labelTitleDisplay = new System.Windows.Forms.Label();
+            this.imageListDisplay = new System.Windows.Forms.ImageList(this.components);
+            this.labelImage = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textte)).BeginInit();
             this.SuspendLayout();
@@ -108,29 +119,125 @@
             this.labelAuthor.AutoSize = true;
             this.labelAuthor.Location = new System.Drawing.Point(12, 65);
             this.labelAuthor.Name = "labelAuthor";
-            this.labelAuthor.Size = new System.Drawing.Size(38, 13);
+            this.labelAuthor.Size = new System.Drawing.Size(41, 13);
             this.labelAuthor.TabIndex = 5;
-            this.labelAuthor.Text = "Author";
+            this.labelAuthor.Text = "Author:";
             // 
             // textte
             // 
             this.textte.SynchronizingObject = this;
             // 
-            // textBoxAuthor
+            // labelAuthorDisplay
             // 
-            this.textBoxAuthor.Enabled = false;
-            this.textBoxAuthor.Location = new System.Drawing.Point(56, 58);
-            this.textBoxAuthor.Name = "textBoxAuthor";
-            this.textBoxAuthor.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAuthor.TabIndex = 6;
-            this.textBoxAuthor.Text = "S";
+            this.labelAuthorDisplay.AutoSize = true;
+            this.labelAuthorDisplay.Location = new System.Drawing.Point(81, 65);
+            this.labelAuthorDisplay.Name = "labelAuthorDisplay";
+            this.labelAuthorDisplay.Size = new System.Drawing.Size(60, 13);
+            this.labelAuthorDisplay.TabIndex = 6;
+            this.labelAuthorDisplay.Text = "labelAuthor";
+            // 
+            // labelScore
+            // 
+            this.labelScore.AutoSize = true;
+            this.labelScore.Location = new System.Drawing.Point(12, 196);
+            this.labelScore.Name = "labelScore";
+            this.labelScore.Size = new System.Drawing.Size(38, 13);
+            this.labelScore.TabIndex = 7;
+            this.labelScore.Text = "Score:";
+            // 
+            // labelScoreDisplay
+            // 
+            this.labelScoreDisplay.AutoSize = true;
+            this.labelScoreDisplay.Location = new System.Drawing.Point(81, 196);
+            this.labelScoreDisplay.Name = "labelScoreDisplay";
+            this.labelScoreDisplay.Size = new System.Drawing.Size(57, 13);
+            this.labelScoreDisplay.TabIndex = 8;
+            this.labelScoreDisplay.Text = "labelScore";
+            // 
+            // labelUp
+            // 
+            this.labelUp.AutoSize = true;
+            this.labelUp.Location = new System.Drawing.Point(12, 130);
+            this.labelUp.Name = "labelUp";
+            this.labelUp.Size = new System.Drawing.Size(49, 13);
+            this.labelUp.TabIndex = 9;
+            this.labelUp.Text = "Up Vote:";
+            // 
+            // labelUpDisplay
+            // 
+            this.labelUpDisplay.AutoSize = true;
+            this.labelUpDisplay.Location = new System.Drawing.Point(81, 130);
+            this.labelUpDisplay.Name = "labelUpDisplay";
+            this.labelUpDisplay.Size = new System.Drawing.Size(43, 13);
+            this.labelUpDisplay.TabIndex = 10;
+            this.labelUpDisplay.Text = "labelUp";
+            // 
+            // labelDown
+            // 
+            this.labelDown.AutoSize = true;
+            this.labelDown.Location = new System.Drawing.Point(12, 163);
+            this.labelDown.Name = "labelDown";
+            this.labelDown.Size = new System.Drawing.Size(63, 13);
+            this.labelDown.TabIndex = 11;
+            this.labelDown.Text = "Down Vote:";
+            // 
+            // labelDownDisplay
+            // 
+            this.labelDownDisplay.AutoSize = true;
+            this.labelDownDisplay.Location = new System.Drawing.Point(81, 163);
+            this.labelDownDisplay.Name = "labelDownDisplay";
+            this.labelDownDisplay.Size = new System.Drawing.Size(57, 13);
+            this.labelDownDisplay.TabIndex = 12;
+            this.labelDownDisplay.Text = "labelDown";
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Location = new System.Drawing.Point(15, 95);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(30, 13);
+            this.labelTitle.TabIndex = 13;
+            this.labelTitle.Text = "Title:";
+            // 
+            // labelTitleDisplay
+            // 
+            this.labelTitleDisplay.AutoSize = true;
+            this.labelTitleDisplay.Location = new System.Drawing.Point(81, 95);
+            this.labelTitleDisplay.Name = "labelTitleDisplay";
+            this.labelTitleDisplay.Size = new System.Drawing.Size(49, 13);
+            this.labelTitleDisplay.TabIndex = 14;
+            this.labelTitleDisplay.Text = "labelTitle";
+            // 
+            // imageListDisplay
+            // 
+            this.imageListDisplay.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageListDisplay.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListDisplay.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // labelImage
+            // 
+            this.labelImage.AutoSize = true;
+            this.labelImage.Location = new System.Drawing.Point(378, 64);
+            this.labelImage.Name = "labelImage";
+            this.labelImage.Size = new System.Drawing.Size(36, 13);
+            this.labelImage.TabIndex = 15;
+            this.labelImage.Text = "Image";
             // 
             // FinalDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 389);
-            this.Controls.Add(this.textBoxAuthor);
+            this.Controls.Add(this.labelImage);
+            this.Controls.Add(this.labelTitleDisplay);
+            this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.labelDownDisplay);
+            this.Controls.Add(this.labelDown);
+            this.Controls.Add(this.labelUpDisplay);
+            this.Controls.Add(this.labelUp);
+            this.Controls.Add(this.labelScoreDisplay);
+            this.Controls.Add(this.labelScore);
+            this.Controls.Add(this.labelAuthorDisplay);
             this.Controls.Add(this.labelAuthor);
             this.Controls.Add(this.buttonCommentClear);
             this.Controls.Add(this.buttonCommentSubmit);
@@ -159,6 +266,16 @@
         private System.Windows.Forms.Button buttonCommentClear;
         private System.Windows.Forms.Label labelAuthor;
         private System.Diagnostics.EventLog textte;
-        private System.Windows.Forms.TextBox textBoxAuthor;
+        private System.Windows.Forms.Label labelUpDisplay;
+        private System.Windows.Forms.Label labelUp;
+        private System.Windows.Forms.Label labelScoreDisplay;
+        private System.Windows.Forms.Label labelScore;
+        private System.Windows.Forms.Label labelAuthorDisplay;
+        private System.Windows.Forms.Label labelImage;
+        private System.Windows.Forms.Label labelTitleDisplay;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label labelDownDisplay;
+        private System.Windows.Forms.Label labelDown;
+        private System.Windows.Forms.ImageList imageListDisplay;
     }
 }
