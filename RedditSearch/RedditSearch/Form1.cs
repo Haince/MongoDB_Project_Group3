@@ -25,16 +25,13 @@ namespace RedditSearch
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             SearchResults formSR = new SearchResults();
-            //////////////////////
-            //this.Hide();
-            //formSR.ShowDialog();
-            //There are two ways that we show the next page 
-            //the way right now leaves the first page so you can see your 
-            //search but you are unable to interact with it so we do not need to
-            //worry about people changing data
-            /////////////////////////
             formSR.ShowDialog();
             
+        }
+
+        private void buttonClearSearch_Click(object sender, EventArgs e)
+        {
+            textBoxAuthorSearch.Text = "";
         }
     }
 }

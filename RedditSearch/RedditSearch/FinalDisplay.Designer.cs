@@ -35,7 +35,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonCommentSubmit = new System.Windows.Forms.Button();
             this.buttonCommentClear = new System.Windows.Forms.Button();
+            this.labelAuthor = new System.Windows.Forms.Label();
+            this.textte = new System.Diagnostics.EventLog();
+            this.textBoxAuthor = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textte)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -87,6 +91,7 @@
             this.buttonCommentSubmit.TabIndex = 3;
             this.buttonCommentSubmit.Text = "Submit";
             this.buttonCommentSubmit.UseVisualStyleBackColor = true;
+            this.buttonCommentSubmit.Click += new System.EventHandler(this.buttonCommentSubmit_Click);
             // 
             // buttonCommentClear
             // 
@@ -98,11 +103,35 @@
             this.buttonCommentClear.UseVisualStyleBackColor = true;
             this.buttonCommentClear.Click += new System.EventHandler(this.buttonCommentClear_Click);
             // 
+            // labelAuthor
+            // 
+            this.labelAuthor.AutoSize = true;
+            this.labelAuthor.Location = new System.Drawing.Point(12, 65);
+            this.labelAuthor.Name = "labelAuthor";
+            this.labelAuthor.Size = new System.Drawing.Size(38, 13);
+            this.labelAuthor.TabIndex = 5;
+            this.labelAuthor.Text = "Author";
+            // 
+            // textte
+            // 
+            this.textte.SynchronizingObject = this;
+            // 
+            // textBoxAuthor
+            // 
+            this.textBoxAuthor.Enabled = false;
+            this.textBoxAuthor.Location = new System.Drawing.Point(56, 58);
+            this.textBoxAuthor.Name = "textBoxAuthor";
+            this.textBoxAuthor.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAuthor.TabIndex = 6;
+            this.textBoxAuthor.Text = "S";
+            // 
             // FinalDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 389);
+            this.Controls.Add(this.textBoxAuthor);
+            this.Controls.Add(this.labelAuthor);
             this.Controls.Add(this.buttonCommentClear);
             this.Controls.Add(this.buttonCommentSubmit);
             this.Controls.Add(this.label1);
@@ -113,6 +142,7 @@
             this.Text = "FinalDisplay";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +157,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonCommentSubmit;
         private System.Windows.Forms.Button buttonCommentClear;
+        private System.Windows.Forms.Label labelAuthor;
+        private System.Diagnostics.EventLog textte;
+        private System.Windows.Forms.TextBox textBoxAuthor;
     }
 }

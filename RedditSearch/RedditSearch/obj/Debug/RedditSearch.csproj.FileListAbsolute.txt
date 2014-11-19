@@ -9,3 +9,14 @@ C:\Users\Mackenzie Willard\Documents\GitHub\MongoDB_Project_Group3\RedditSearch\
 C:\Users\Mackenzie Willard\Documents\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.csproj.GenerateResource.Cache
 C:\Users\Mackenzie Willard\Documents\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.exe
 C:\Users\Mackenzie Willard\Documents\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.pdb
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\RedditSearch.exe.config
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.exe
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.pdb
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\RedditSearch.exe
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\RedditSearch.pdb
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.csprojResolveAssemblyReference.cache
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.FinalDisplay.resources
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.RedditSearchForm.resources
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.Properties.Resources.resources
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.SearchResults.resources
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.csproj.GenerateResource.Cache

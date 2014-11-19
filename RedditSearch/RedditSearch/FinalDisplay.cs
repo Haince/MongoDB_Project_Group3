@@ -26,5 +26,11 @@ namespace RedditSearch
         {
             textBoxComment.Text = "";
         }
+
+        private void buttonCommentSubmit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Comment has been added!");
+            textBoxComment.Text = "";
+        }
     }
 }
