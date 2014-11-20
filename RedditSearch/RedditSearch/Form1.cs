@@ -24,7 +24,13 @@ namespace RedditSearch
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            SearchResults formSR = new SearchResults();
+            if(textBoxAuthorSearch.Text=="")
+            {
+                MessageBox.Show("Search bar empty!!!");
+                return;    
+            }
+
+            SearchResults formSR = new SearchResults(textBoxAuthorSearch.Text);
             formSR.ShowDialog();
             
         }

@@ -20,3 +20,9 @@ F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditS
 F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.Properties.Resources.resources
 F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.SearchResults.resources
 F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.csproj.GenerateResource.Cache
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\MongoDB.Bson.dll
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\MongoDB.Driver.dll
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\MongoDB.Bson.pdb
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\MongoDB.Bson.xml
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\MongoDB.Driver.pdb
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\MongoDB.Driver.xml
