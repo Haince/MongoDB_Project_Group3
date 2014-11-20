@@ -26,3 +26,4 @@ F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\MongoDB
 F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\MongoDB.Bson.xml
 F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\MongoDB.Driver.pdb
 F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\bin\Debug\MongoDB.Driver.xml
+F:\Dox\GitHub\MongoDB_Project_Group3\RedditSearch\RedditSearch\obj\Debug\RedditSearch.loadingBox.resources

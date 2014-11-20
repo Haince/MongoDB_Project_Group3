@@ -11,34 +11,41 @@ using MongoDB.Bson;
 using MongoDB;
 using MongoDB.Driver.Linq;
 using MongoDB.Driver;
+using System.Text.RegularExpressions;
 namespace RedditSearch
 {
     public partial class SearchResults : Form
     {
         String keyword;
-        public SearchResults(String returnedText)
+       public SearchResults(String returnedText)
         {
             InitializeComponent();
             keyword =returnedText;
+            
         }
 
         private void SearchResults_Load(object sender, EventArgs e)
         {
+            loadingBox connectingWaitBox = new loadingBox();
+
+            
+          
+            connectingWaitBox.Show();
             MongoClient client = new MongoClient();
             MongoServer server = client.GetServer();
-            MongoDatabase db = server.GetDatabase("group3DB");
+            MongoDatabase db = server.GetDatabase("group3");
             MongoCollection<BsonDocument> colleciton = db.GetCollection("reddit");
-            BsonDocument document = new BsonDocument {
-                                        {"author",keyword}};
-
-            var query = new QueryDocument("author","\b"+keyword+"");
+            var query = new QueryDocument("author",new BsonRegularExpression(new Regex(keyword, RegexOptions.IgnoreCase)));
             MongoCursor cursor = colleciton.Find(query);
-            foreach (var record in cursor)
+            foreach (BsonDocument record in cursor)
             {
-                
+               
+                dataGridViewAuthorResult.Rows.Add(record.GetValue("created_utc").ToString(),  record.GetValue("title").ToString(), record.GetValue("author").ToString(), record.GetValue("score").ToString());
             }
+            
             //will add the connection to the database here 
             //as well as the information from the search to make the results display
+            connectingWaitBox.Dispose();
         }
 
         private void buttonReturnToSearch_Click(object sender, EventArgs e)
@@ -48,12 +55,13 @@ namespace RedditSearch
             this.Close();
         }
 
-        private void buttonToFinal_Click(object sender, EventArgs e)
+       
+
+        private void dataGridViewAuthorResult_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            // we will just use this for now while we do not have the data 
-            //that will be used to move to the next form.
-            FinalDisplay fd = new FinalDisplay();
-            fd.ShowDialog();
+            int selected_id = Convert.ToInt32(dataGridViewAuthorResult[0, e.RowIndex].Value);
+             FinalDisplay fd = new FinalDisplay(selected_id);
+            fd.ShowDialog();   
         }
     }
 }

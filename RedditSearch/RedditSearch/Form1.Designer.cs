@@ -40,14 +40,14 @@
             // 
             // textBoxAuthorSearch
             // 
-            this.textBoxAuthorSearch.Location = new System.Drawing.Point(122, 90);
+            this.textBoxAuthorSearch.Location = new System.Drawing.Point(502, 100);
             this.textBoxAuthorSearch.Name = "textBoxAuthorSearch";
             this.textBoxAuthorSearch.Size = new System.Drawing.Size(301, 20);
             this.textBoxAuthorSearch.TabIndex = 0;
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(131, 130);
+            this.buttonSearch.Location = new System.Drawing.Point(511, 140);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(122, 23);
             this.buttonSearch.TabIndex = 1;
@@ -58,7 +58,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(119, 74);
+            this.label1.Location = new System.Drawing.Point(396, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 2;
@@ -71,7 +71,7 @@
             this.closeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(584, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1315, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -90,7 +90,7 @@
             // 
             // buttonClearSearch
             // 
-            this.buttonClearSearch.Location = new System.Drawing.Point(291, 130);
+            this.buttonClearSearch.Location = new System.Drawing.Point(671, 140);
             this.buttonClearSearch.Name = "buttonClearSearch";
             this.buttonClearSearch.Size = new System.Drawing.Size(122, 23);
             this.buttonClearSearch.TabIndex = 4;
@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.ClientSize = new System.Drawing.Size(1315, 414);
             this.Controls.Add(this.buttonClearSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSearch);

@@ -47,8 +47,8 @@
             this.labelDownDisplay = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelTitleDisplay = new System.Windows.Forms.Label();
-            this.imageListDisplay = new System.Windows.Forms.ImageList(this.components);
             this.labelImage = new System.Windows.Forms.Label();
+            this.displayImage = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textte)).BeginInit();
             this.SuspendLayout();
@@ -117,7 +117,7 @@
             // labelAuthor
             // 
             this.labelAuthor.AutoSize = true;
-            this.labelAuthor.Location = new System.Drawing.Point(12, 65);
+            this.labelAuthor.Location = new System.Drawing.Point(12, 96);
             this.labelAuthor.Name = "labelAuthor";
             this.labelAuthor.Size = new System.Drawing.Size(41, 13);
             this.labelAuthor.TabIndex = 5;
@@ -130,7 +130,7 @@
             // labelAuthorDisplay
             // 
             this.labelAuthorDisplay.AutoSize = true;
-            this.labelAuthorDisplay.Location = new System.Drawing.Point(81, 65);
+            this.labelAuthorDisplay.Location = new System.Drawing.Point(81, 96);
             this.labelAuthorDisplay.Name = "labelAuthorDisplay";
             this.labelAuthorDisplay.Size = new System.Drawing.Size(60, 13);
             this.labelAuthorDisplay.TabIndex = 6;
@@ -193,7 +193,7 @@
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(15, 95);
+            this.labelTitle.Location = new System.Drawing.Point(15, 33);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(30, 13);
             this.labelTitle.TabIndex = 13;
@@ -202,17 +202,11 @@
             // labelTitleDisplay
             // 
             this.labelTitleDisplay.AutoSize = true;
-            this.labelTitleDisplay.Location = new System.Drawing.Point(81, 95);
+            this.labelTitleDisplay.Location = new System.Drawing.Point(81, 33);
             this.labelTitleDisplay.Name = "labelTitleDisplay";
             this.labelTitleDisplay.Size = new System.Drawing.Size(49, 13);
             this.labelTitleDisplay.TabIndex = 14;
             this.labelTitleDisplay.Text = "labelTitle";
-            // 
-            // imageListDisplay
-            // 
-            this.imageListDisplay.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageListDisplay.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageListDisplay.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // labelImage
             // 
@@ -222,6 +216,12 @@
             this.labelImage.Size = new System.Drawing.Size(36, 13);
             this.labelImage.TabIndex = 15;
             this.labelImage.Text = "Image";
+            // 
+            // displayImage
+            // 
+            this.displayImage.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.displayImage.ImageSize = new System.Drawing.Size(16, 16);
+            this.displayImage.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // FinalDisplay
             // 
@@ -247,6 +247,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FinalDisplay";
             this.Text = "FinalDisplay";
+            this.Load += new System.EventHandler(this.FinalDisplay_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textte)).EndInit();
@@ -276,6 +277,6 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelDownDisplay;
         private System.Windows.Forms.Label labelDown;
-        private System.Windows.Forms.ImageList imageListDisplay;
+        private System.Windows.Forms.ImageList displayImage;
     }
 }
