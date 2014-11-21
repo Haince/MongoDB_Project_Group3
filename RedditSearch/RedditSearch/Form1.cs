@@ -30,7 +30,7 @@ namespace RedditSearch
                 return;    
             }
 
-            SearchResults formSR = new SearchResults(textBoxAuthorSearch.Text);
+            SearchResults formSR = new SearchResults(textBoxAuthorSearch.Text,false);
             formSR.ShowDialog();
             
         }
@@ -38,6 +38,18 @@ namespace RedditSearch
         private void buttonClearSearch_Click(object sender, EventArgs e)
         {
             textBoxAuthorSearch.Text = "";
+        }
+
+        private void buttonTitle_Click(object sender, EventArgs e)
+        {
+            if (textBoxAuthorSearch.Text == "")
+            {
+                MessageBox.Show("Search bar empty!!!");
+                return;
+            }
+
+            SearchResults formSR = new SearchResults(textBoxAuthorSearch.Text,true);
+            formSR.ShowDialog();
         }
     }
 }

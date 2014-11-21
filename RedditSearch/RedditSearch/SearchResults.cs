@@ -17,10 +17,12 @@ namespace RedditSearch
     public partial class SearchResults : Form
     {
         String keyword;
-       public SearchResults(String returnedText)
+        bool authorSelected;
+       public SearchResults(String returnedText, bool author_selected)
         {
             InitializeComponent();
             keyword =returnedText;
+            authorSelected = author_selected;
             
         }
 
@@ -35,8 +37,14 @@ namespace RedditSearch
             MongoServer server = client.GetServer();
             MongoDatabase db = server.GetDatabase("group3");
             MongoCollection<BsonDocument> colleciton = db.GetCollection("reddit");
-            var query = new QueryDocument("author",new BsonRegularExpression(new Regex(keyword, RegexOptions.IgnoreCase)));
+            QueryDocument query;
+            if(authorSelected)query = new QueryDocument("author",new BsonRegularExpression(new Regex(keyword, RegexOptions.IgnoreCase)));
+            else query = new QueryDocument("title", new BsonRegularExpression(new Regex(keyword, RegexOptions.IgnoreCase)));
             MongoCursor cursor = colleciton.Find(query);
+            Console.WriteLine(client.ToString());
+            Console.WriteLine(server.ToString());
+            Console.WriteLine(colleciton.ToString());
+            Console.WriteLine(query.ToString());
             foreach (BsonDocument record in cursor)
             {
                
@@ -46,6 +54,7 @@ namespace RedditSearch
             //will add the connection to the database here 
             //as well as the information from the search to make the results display
             connectingWaitBox.Dispose();
+            
         }
 
         private void buttonReturnToSearch_Click(object sender, EventArgs e)

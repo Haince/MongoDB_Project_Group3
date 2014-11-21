@@ -30,11 +30,11 @@
         {
             this.textBoxAuthorSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonClearSearch = new System.Windows.Forms.Button();
+            this.buttonTitle = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,22 +47,13 @@
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(511, 140);
+            this.buttonSearch.Location = new System.Drawing.Point(440, 140);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(122, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(144, 23);
             this.buttonSearch.TabIndex = 1;
-            this.buttonSearch.Text = "Search";
+            this.buttonSearch.Text = "Search by author";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(396, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Search By Author";
             // 
             // menuStrip1
             // 
@@ -90,21 +81,31 @@
             // 
             // buttonClearSearch
             // 
-            this.buttonClearSearch.Location = new System.Drawing.Point(671, 140);
+            this.buttonClearSearch.Location = new System.Drawing.Point(723, 140);
             this.buttonClearSearch.Name = "buttonClearSearch";
-            this.buttonClearSearch.Size = new System.Drawing.Size(122, 23);
+            this.buttonClearSearch.Size = new System.Drawing.Size(70, 23);
             this.buttonClearSearch.TabIndex = 4;
             this.buttonClearSearch.Text = "Clear";
             this.buttonClearSearch.UseVisualStyleBackColor = true;
             this.buttonClearSearch.Click += new System.EventHandler(this.buttonClearSearch_Click);
+            // 
+            // buttonTitle
+            // 
+            this.buttonTitle.Location = new System.Drawing.Point(590, 140);
+            this.buttonTitle.Name = "buttonTitle";
+            this.buttonTitle.Size = new System.Drawing.Size(127, 23);
+            this.buttonTitle.TabIndex = 5;
+            this.buttonTitle.Text = "Search by Title";
+            this.buttonTitle.UseVisualStyleBackColor = true;
+            this.buttonTitle.Click += new System.EventHandler(this.buttonTitle_Click);
             // 
             // RedditSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1315, 414);
+            this.Controls.Add(this.buttonTitle);
             this.Controls.Add(this.buttonClearSearch);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxAuthorSearch);
             this.Controls.Add(this.menuStrip1);
@@ -122,11 +123,11 @@
 
         private System.Windows.Forms.TextBox textBoxAuthorSearch;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.Button buttonClearSearch;
+        private System.Windows.Forms.Button buttonTitle;
     }
 }
 
