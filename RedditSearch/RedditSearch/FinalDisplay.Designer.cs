@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,9 +47,10 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelTitleDisplay = new System.Windows.Forms.Label();
             this.labelImage = new System.Windows.Forms.Label();
-            this.displayImage = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBoxImported = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textte)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImported)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -217,17 +217,21 @@
             this.labelImage.TabIndex = 15;
             this.labelImage.Text = "Image";
             // 
-            // displayImage
+            // pictureBoxImported
             // 
-            this.displayImage.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.displayImage.ImageSize = new System.Drawing.Size(16, 16);
-            this.displayImage.TransparentColor = System.Drawing.Color.Transparent;
+            this.pictureBoxImported.Location = new System.Drawing.Point(381, 80);
+            this.pictureBoxImported.Name = "pictureBoxImported";
+            this.pictureBoxImported.Size = new System.Drawing.Size(201, 129);
+            this.pictureBoxImported.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxImported.TabIndex = 16;
+            this.pictureBoxImported.TabStop = false;
             // 
             // FinalDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 389);
+            this.Controls.Add(this.pictureBoxImported);
             this.Controls.Add(this.labelImage);
             this.Controls.Add(this.labelTitleDisplay);
             this.Controls.Add(this.labelTitle);
@@ -251,6 +255,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textte)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImported)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,6 +282,6 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelDownDisplay;
         private System.Windows.Forms.Label labelDown;
-        private System.Windows.Forms.ImageList displayImage;
+        private System.Windows.Forms.PictureBox pictureBoxImported;
     }
 }

@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -54,17 +56,30 @@ namespace RedditSearch
             MongoCursor cursor = colleciton.Find(query);
             foreach (BsonDocument record in cursor)
             {
+                this.Text = record.GetValue("title").ToString();
                 labelAuthorDisplay.Text = record.GetValue("author").ToString();
                 labelTitleDisplay.Text = record.GetValue("title").ToString();
                 labelUpDisplay.Text = record.GetValue("ups").ToString();
                 labelDownDisplay.Text = record.GetValue("downs").ToString();
                 labelScoreDisplay.Text = record.GetValue("score").ToString();
-                displayImage.Images.Add(Image.FromFile(record.GetValue("thumbnail").ToString()));
+                pictureBoxImported.Image = GetImageFromUrl(record.GetValue("thumbnail").ToString());
             }
 
             //will add the connection to the database here 
             //as well as the information from the search to make the results display
             connectingWaitBox.Dispose();
+        }
+        public  Image GetImageFromUrl(string url)
+        {
+            HttpWebRequest httpWebRequest = (HttpWebRequest)HttpWebRequest.Create(url);
+
+            using (HttpWebResponse httpWebReponse = (HttpWebResponse)httpWebRequest.GetResponse())
+            {
+                using (Stream stream = httpWebReponse.GetResponseStream())
+                {
+                    return Image.FromStream(stream);
+                }
+            }
         }
     }
 }

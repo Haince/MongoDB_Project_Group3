@@ -30,7 +30,7 @@ namespace RedditSearch
                 return;    
             }
 
-            SearchResults formSR = new SearchResults(textBoxAuthorSearch.Text,false);
+            SearchResults formSR = new SearchResults(textBoxAuthorSearch.Text,true);
             formSR.ShowDialog();
             
         }
@@ -48,7 +48,7 @@ namespace RedditSearch
                 return;
             }
 
-            SearchResults formSR = new SearchResults(textBoxAuthorSearch.Text,true);
+            SearchResults formSR = new SearchResults(textBoxAuthorSearch.Text,false);
             formSR.ShowDialog();
         }
     }
