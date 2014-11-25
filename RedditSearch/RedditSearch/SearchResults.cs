@@ -50,7 +50,8 @@ namespace RedditSearch
                
                 dataGridViewAuthorResult.Rows.Add(record.GetValue("created_utc").ToString(),  record.GetValue("title").ToString(), record.GetValue("author").ToString(), record.GetValue("score").ToString());
             }
-            
+            DataGridViewColumn column = dataGridViewAuthorResult.Columns["Title"];
+            dataGridViewAuthorResult.Sort(column, ListSortDirection.Ascending);
             //will add the connection to the database here 
             //as well as the information from the search to make the results display
             connectingWaitBox.Dispose();

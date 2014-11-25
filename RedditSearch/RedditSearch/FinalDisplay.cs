@@ -36,6 +36,54 @@ namespace RedditSearch
 
         private void buttonCommentSubmit_Click(object sender, EventArgs e)
         {
+            if (textBoxComment.Text == "") 
+            {
+                MessageBox.Show("Enter a comment");
+                return;
+            }
+            loadingBox connectingWaitBox = new loadingBox();
+
+
+
+            connectingWaitBox.Show();
+            MongoClient client = new MongoClient();
+            MongoServer server = client.GetServer();
+            MongoDatabase db = server.GetDatabase("group3");
+            MongoCollection<BsonDocument> colleciton = db.GetCollection("reddit");
+            
+            var query = new QueryDocument("created_utc", selectedID);
+            MongoCursor cursor = colleciton.Find(query);
+           
+            var comment = new BsonDocument("comment",textBoxComment.Text);
+            var comments = new BsonArray();
+         //  var comments = new BsonDocument(allowDuplicateNames:true);
+            //string commentQuery;
+             foreach (BsonDocument record in cursor)
+             {
+                 if (record.Contains("comments"))
+                 {
+                     comments.Add(record.GetValue("comments"));
+                     //comments.AllowDuplicateNames = true;
+                     comments.Add(comment);
+                     //commentQuery = record.GetValue("comments").ToString();
+                     //commentQuery +=","+comment.ToString();
+                     ////comments.Add(record.GetValue("comments"));
+                     ////comments = new BsonArray("comments", record.GetValue("comments"));
+                     //comments = new BsonDocument("comments", BsonDocument.Parse("{"+commentQuery+"}"));
+
+                 }
+                 else
+                 { comments.Add(comment); }
+
+             }
+
+             var commentsadding = new BsonDocument("comments", comments);
+             var update = new UpdateDocument { {"$set", commentsadding }};
+             var result = colleciton.FindAndModify(query,new SortByDocument() ,update,false,true);
+            //will add the connection to the database here 
+            //as well as the information from the search to make the results display
+            connectingWaitBox.Dispose();
+
             MessageBox.Show("Comment has been added!");
             textBoxComment.Text = "";
         }
@@ -63,6 +111,7 @@ namespace RedditSearch
                 labelDownDisplay.Text = record.GetValue("downs").ToString();
                 labelScoreDisplay.Text = record.GetValue("score").ToString();
                 pictureBoxImported.Image = GetImageFromUrl(record.GetValue("thumbnail").ToString());
+                if (record.Contains("comments")) textBoxAddedComments.Text = record.GetValue("comments").ToString();
             }
 
             //will add the connection to the database here 

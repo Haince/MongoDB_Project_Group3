@@ -48,6 +48,7 @@
             this.labelTitleDisplay = new System.Windows.Forms.Label();
             this.labelImage = new System.Windows.Forms.Label();
             this.pictureBoxImported = new System.Windows.Forms.PictureBox();
+            this.textBoxAddedComments = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImported)).BeginInit();
@@ -226,11 +227,21 @@
             this.pictureBoxImported.TabIndex = 16;
             this.pictureBoxImported.TabStop = false;
             // 
+            // textBoxAddedComments
+            // 
+            this.textBoxAddedComments.Enabled = false;
+            this.textBoxAddedComments.Location = new System.Drawing.Point(15, 252);
+            this.textBoxAddedComments.Multiline = true;
+            this.textBoxAddedComments.Name = "textBoxAddedComments";
+            this.textBoxAddedComments.Size = new System.Drawing.Size(262, 100);
+            this.textBoxAddedComments.TabIndex = 17;
+            // 
             // FinalDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 389);
+            this.Controls.Add(this.textBoxAddedComments);
             this.Controls.Add(this.pictureBoxImported);
             this.Controls.Add(this.labelImage);
             this.Controls.Add(this.labelTitleDisplay);
@@ -283,5 +294,6 @@
         private System.Windows.Forms.Label labelDownDisplay;
         private System.Windows.Forms.Label labelDown;
         private System.Windows.Forms.PictureBox pictureBoxImported;
+        private System.Windows.Forms.TextBox textBoxAddedComments;
     }
 }

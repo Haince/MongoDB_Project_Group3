@@ -32,11 +32,11 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewAuthorResult = new System.Windows.Forms.DataGridView();
+            this.buttonReturnToSearch = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.author = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.score = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonReturnToSearch = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuthorResult)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,7 @@
             this.title,
             this.author,
             this.score});
+            this.dataGridViewAuthorResult.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewAuthorResult.Location = new System.Drawing.Point(12, 27);
             this.dataGridViewAuthorResult.MultiSelect = false;
             this.dataGridViewAuthorResult.Name = "dataGridViewAuthorResult";
@@ -81,6 +82,16 @@
             this.dataGridViewAuthorResult.Size = new System.Drawing.Size(560, 266);
             this.dataGridViewAuthorResult.TabIndex = 1;
             this.dataGridViewAuthorResult.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAuthorResult_CellDoubleClick);
+            // 
+            // buttonReturnToSearch
+            // 
+            this.buttonReturnToSearch.Location = new System.Drawing.Point(21, 326);
+            this.buttonReturnToSearch.Name = "buttonReturnToSearch";
+            this.buttonReturnToSearch.Size = new System.Drawing.Size(133, 23);
+            this.buttonReturnToSearch.TabIndex = 2;
+            this.buttonReturnToSearch.Text = "Return To Search ";
+            this.buttonReturnToSearch.UseVisualStyleBackColor = true;
+            this.buttonReturnToSearch.Click += new System.EventHandler(this.buttonReturnToSearch_Click);
             // 
             // id
             // 
@@ -93,6 +104,7 @@
             this.title.HeaderText = "Title";
             this.title.Name = "title";
             this.title.ReadOnly = true;
+            this.title.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // author
             // 
@@ -105,16 +117,6 @@
             this.score.HeaderText = "Score";
             this.score.Name = "score";
             this.score.ReadOnly = true;
-            // 
-            // buttonReturnToSearch
-            // 
-            this.buttonReturnToSearch.Location = new System.Drawing.Point(21, 326);
-            this.buttonReturnToSearch.Name = "buttonReturnToSearch";
-            this.buttonReturnToSearch.Size = new System.Drawing.Size(133, 23);
-            this.buttonReturnToSearch.TabIndex = 2;
-            this.buttonReturnToSearch.Text = "Return To Search ";
-            this.buttonReturnToSearch.UseVisualStyleBackColor = true;
-            this.buttonReturnToSearch.Click += new System.EventHandler(this.buttonReturnToSearch_Click);
             // 
             // SearchResults
             // 
