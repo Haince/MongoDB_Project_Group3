@@ -56,21 +56,14 @@ namespace RedditSearch
            
             var comment = new BsonDocument("comment",textBoxComment.Text);
             var comments = new BsonArray();
-         //  var comments = new BsonDocument(allowDuplicateNames:true);
-            //string commentQuery;
              foreach (BsonDocument record in cursor)
              {
+                 
                  if (record.Contains("comments"))
                  {
-                     comments.Add(record.GetValue("comments"));
-                     //comments.AllowDuplicateNames = true;
+                     comments = record.GetValue("comments").AsBsonArray;
                      comments.Add(comment);
-                     //commentQuery = record.GetValue("comments").ToString();
-                     //commentQuery +=","+comment.ToString();
-                     ////comments.Add(record.GetValue("comments"));
-                     ////comments = new BsonArray("comments", record.GetValue("comments"));
-                     //comments = new BsonDocument("comments", BsonDocument.Parse("{"+commentQuery+"}"));
-
+                 
                  }
                  else
                  { comments.Add(comment); }
@@ -79,6 +72,7 @@ namespace RedditSearch
 
              var commentsadding = new BsonDocument("comments", comments);
              var update = new UpdateDocument { {"$set", commentsadding }};
+             
              var result = colleciton.FindAndModify(query,new SortByDocument() ,update,false,true);
             //will add the connection to the database here 
             //as well as the information from the search to make the results display
@@ -86,6 +80,7 @@ namespace RedditSearch
 
             MessageBox.Show("Comment has been added!");
             textBoxComment.Text = "";
+            FinalDisplay_Load(sender, e);
         }
 
         private void FinalDisplay_Load(object sender, EventArgs e)
@@ -111,12 +106,18 @@ namespace RedditSearch
                 labelDownDisplay.Text = record.GetValue("downs").ToString();
                 labelScoreDisplay.Text = record.GetValue("score").ToString();
                 pictureBoxImported.Image = GetImageFromUrl(record.GetValue("thumbnail").ToString());
-                if (record.Contains("comments")) textBoxAddedComments.Text = record.GetValue("comments").ToString();
+                if (record.Contains("comments"))
+                {
+                    textBoxAddedComments.Text = "\n";
+                    foreach (BsonDocument comment in record.GetValue("comments").AsBsonArray)
+                    {
+                        textBoxAddedComments.Text += "\n"+comment.GetValue("comment").ToString() ;
+                    }
+                    //textBoxAddedComments.Text = record.GetValue("comments").ToString();
+                }
             }
 
-            //will add the connection to the database here 
-            //as well as the information from the search to make the results display
-            connectingWaitBox.Dispose();
+             connectingWaitBox.Dispose();
         }
         public  Image GetImageFromUrl(string url)
         {

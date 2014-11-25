@@ -230,10 +230,11 @@
             // textBoxAddedComments
             // 
             this.textBoxAddedComments.Enabled = false;
-            this.textBoxAddedComments.Location = new System.Drawing.Point(15, 252);
+            this.textBoxAddedComments.Location = new System.Drawing.Point(12, 243);
             this.textBoxAddedComments.Multiline = true;
             this.textBoxAddedComments.Name = "textBoxAddedComments";
-            this.textBoxAddedComments.Size = new System.Drawing.Size(262, 100);
+            this.textBoxAddedComments.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxAddedComments.Size = new System.Drawing.Size(255, 80);
             this.textBoxAddedComments.TabIndex = 17;
             // 
             // FinalDisplay
