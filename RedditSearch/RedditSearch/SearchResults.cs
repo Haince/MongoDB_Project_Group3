@@ -73,5 +73,10 @@ namespace RedditSearch
              FinalDisplay fd = new FinalDisplay(selected_id);
             fd.ShowDialog();   
         }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

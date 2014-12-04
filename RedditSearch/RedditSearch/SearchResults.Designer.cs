@@ -32,11 +32,11 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewAuthorResult = new System.Windows.Forms.DataGridView();
-            this.buttonReturnToSearch = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.author = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.score = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonReturnToSearch = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuthorResult)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             this.closeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1316, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,6 +63,7 @@
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // dataGridViewAuthorResult
             // 
@@ -82,16 +83,6 @@
             this.dataGridViewAuthorResult.Size = new System.Drawing.Size(560, 266);
             this.dataGridViewAuthorResult.TabIndex = 1;
             this.dataGridViewAuthorResult.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAuthorResult_CellDoubleClick);
-            // 
-            // buttonReturnToSearch
-            // 
-            this.buttonReturnToSearch.Location = new System.Drawing.Point(21, 326);
-            this.buttonReturnToSearch.Name = "buttonReturnToSearch";
-            this.buttonReturnToSearch.Size = new System.Drawing.Size(133, 23);
-            this.buttonReturnToSearch.TabIndex = 2;
-            this.buttonReturnToSearch.Text = "Return To Search ";
-            this.buttonReturnToSearch.UseVisualStyleBackColor = true;
-            this.buttonReturnToSearch.Click += new System.EventHandler(this.buttonReturnToSearch_Click);
             // 
             // id
             // 
@@ -118,11 +109,22 @@
             this.score.Name = "score";
             this.score.ReadOnly = true;
             // 
+            // buttonReturnToSearch
+            // 
+            this.buttonReturnToSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonReturnToSearch.Location = new System.Drawing.Point(21, 326);
+            this.buttonReturnToSearch.Name = "buttonReturnToSearch";
+            this.buttonReturnToSearch.Size = new System.Drawing.Size(133, 23);
+            this.buttonReturnToSearch.TabIndex = 2;
+            this.buttonReturnToSearch.Text = "Return To Search ";
+            this.buttonReturnToSearch.UseVisualStyleBackColor = true;
+            this.buttonReturnToSearch.Click += new System.EventHandler(this.buttonReturnToSearch_Click);
+            // 
             // SearchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1316, 361);
+            this.ClientSize = new System.Drawing.Size(984, 361);
             this.Controls.Add(this.buttonReturnToSearch);
             this.Controls.Add(this.dataGridViewAuthorResult);
             this.Controls.Add(this.menuStrip1);

@@ -35,21 +35,24 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonClearSearch = new System.Windows.Forms.Button();
             this.buttonTitle = new System.Windows.Forms.Button();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxAuthorSearch
             // 
-            this.textBoxAuthorSearch.Location = new System.Drawing.Point(502, 100);
+            this.textBoxAuthorSearch.Location = new System.Drawing.Point(440, 155);
             this.textBoxAuthorSearch.Name = "textBoxAuthorSearch";
-            this.textBoxAuthorSearch.Size = new System.Drawing.Size(301, 20);
+            this.textBoxAuthorSearch.Size = new System.Drawing.Size(353, 20);
             this.textBoxAuthorSearch.TabIndex = 0;
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(440, 140);
+            this.buttonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSearch.Location = new System.Drawing.Point(440, 217);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(144, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(127, 23);
             this.buttonSearch.TabIndex = 1;
             this.buttonSearch.Text = "Search by author";
             this.buttonSearch.UseVisualStyleBackColor = true;
@@ -62,7 +65,7 @@
             this.closeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1315, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,7 +84,8 @@
             // 
             // buttonClearSearch
             // 
-            this.buttonClearSearch.Location = new System.Drawing.Point(723, 140);
+            this.buttonClearSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClearSearch.Location = new System.Drawing.Point(723, 217);
             this.buttonClearSearch.Name = "buttonClearSearch";
             this.buttonClearSearch.Size = new System.Drawing.Size(70, 23);
             this.buttonClearSearch.TabIndex = 4;
@@ -91,7 +95,8 @@
             // 
             // buttonTitle
             // 
-            this.buttonTitle.Location = new System.Drawing.Point(590, 140);
+            this.buttonTitle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonTitle.Location = new System.Drawing.Point(582, 217);
             this.buttonTitle.Name = "buttonTitle";
             this.buttonTitle.Size = new System.Drawing.Size(127, 23);
             this.buttonTitle.TabIndex = 5;
@@ -99,11 +104,20 @@
             this.buttonTitle.UseVisualStyleBackColor = true;
             this.buttonTitle.Click += new System.EventHandler(this.buttonTitle_Click);
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Location = new System.Drawing.Point(22, 71);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(273, 195);
+            this.pictureBoxLogo.TabIndex = 6;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // RedditSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1315, 414);
+            this.ClientSize = new System.Drawing.Size(984, 361);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.buttonTitle);
             this.Controls.Add(this.buttonClearSearch);
             this.Controls.Add(this.buttonSearch);
@@ -114,6 +128,7 @@
             this.Text = "Reddit Search";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,6 +143,7 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.Button buttonClearSearch;
         private System.Windows.Forms.Button buttonTitle;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }
 
