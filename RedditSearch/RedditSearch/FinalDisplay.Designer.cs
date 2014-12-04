@@ -48,7 +48,8 @@
             this.labelTitleDisplay = new System.Windows.Forms.Label();
             this.labelImage = new System.Windows.Forms.Label();
             this.pictureBoxImported = new System.Windows.Forms.PictureBox();
-            this.textBoxAddedComments = new System.Windows.Forms.TextBox();
+            this.textBoxAddedComments = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImported)).BeginInit();
@@ -61,7 +62,7 @@
             this.closeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(601, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -80,7 +81,7 @@
             // 
             // textBoxComment
             // 
-            this.textBoxComment.Location = new System.Drawing.Point(610, 243);
+            this.textBoxComment.Location = new System.Drawing.Point(365, 243);
             this.textBoxComment.Multiline = true;
             this.textBoxComment.Name = "textBoxComment";
             this.textBoxComment.Size = new System.Drawing.Size(213, 80);
@@ -89,7 +90,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(607, 227);
+            this.label1.Location = new System.Drawing.Point(362, 227);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 2;
@@ -98,7 +99,7 @@
             // buttonCommentSubmit
             // 
             this.buttonCommentSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCommentSubmit.Location = new System.Drawing.Point(748, 329);
+            this.buttonCommentSubmit.Location = new System.Drawing.Point(503, 329);
             this.buttonCommentSubmit.Name = "buttonCommentSubmit";
             this.buttonCommentSubmit.Size = new System.Drawing.Size(75, 23);
             this.buttonCommentSubmit.TabIndex = 3;
@@ -109,7 +110,7 @@
             // buttonCommentClear
             // 
             this.buttonCommentClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCommentClear.Location = new System.Drawing.Point(610, 329);
+            this.buttonCommentClear.Location = new System.Drawing.Point(365, 329);
             this.buttonCommentClear.Name = "buttonCommentClear";
             this.buttonCommentClear.Size = new System.Drawing.Size(75, 23);
             this.buttonCommentClear.TabIndex = 4;
@@ -214,7 +215,7 @@
             // labelImage
             // 
             this.labelImage.AutoSize = true;
-            this.labelImage.Location = new System.Drawing.Point(619, 64);
+            this.labelImage.Location = new System.Drawing.Point(374, 64);
             this.labelImage.Name = "labelImage";
             this.labelImage.Size = new System.Drawing.Size(36, 13);
             this.labelImage.TabIndex = 15;
@@ -222,7 +223,7 @@
             // 
             // pictureBoxImported
             // 
-            this.pictureBoxImported.Location = new System.Drawing.Point(622, 80);
+            this.pictureBoxImported.Location = new System.Drawing.Point(377, 80);
             this.pictureBoxImported.Name = "pictureBoxImported";
             this.pictureBoxImported.Size = new System.Drawing.Size(201, 129);
             this.pictureBoxImported.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -231,19 +232,28 @@
             // 
             // textBoxAddedComments
             // 
-            this.textBoxAddedComments.Enabled = false;
-            this.textBoxAddedComments.Location = new System.Drawing.Point(12, 243);
-            this.textBoxAddedComments.Multiline = true;
+            this.textBoxAddedComments.AutoSize = true;
+            this.textBoxAddedComments.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.textBoxAddedComments.Location = new System.Drawing.Point(26, 256);
             this.textBoxAddedComments.Name = "textBoxAddedComments";
-            this.textBoxAddedComments.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxAddedComments.Size = new System.Drawing.Size(255, 80);
+            this.textBoxAddedComments.Size = new System.Drawing.Size(0, 13);
             this.textBoxAddedComments.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 227);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Comments:";
             // 
             // FinalDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 361);
+            this.ClientSize = new System.Drawing.Size(601, 361);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxAddedComments);
             this.Controls.Add(this.pictureBoxImported);
             this.Controls.Add(this.labelImage);
@@ -297,6 +307,7 @@
         private System.Windows.Forms.Label labelDownDisplay;
         private System.Windows.Forms.Label labelDown;
         private System.Windows.Forms.PictureBox pictureBoxImported;
-        private System.Windows.Forms.TextBox textBoxAddedComments;
+        private System.Windows.Forms.Label textBoxAddedComments;
+        private System.Windows.Forms.Label label2;
     }
 }
